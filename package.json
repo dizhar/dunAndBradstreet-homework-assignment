@@ -1,0 +1,26 @@
+{
+  "name": "mealticket-homework-assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx cypress open",
+    "test:chrome": "npx cypress run --browser chrome --headless",
+    "test:electron": "npx cypress run --browser electron --headless",
+    "test:all": "npm run test:chrome && npm run test:electron"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.13.12",
+    "@cypress/webpack-dev-server": "^4.0.1",
+    "@testing-library/cypress": "^10.0.3",
+    "@tsconfig/node18": "^18.2.4",
+    "@types/node": "^22.13.5",
+    "cypress": "^14.0.3",
+    "cypress-wait-until": "^3.0.2",
+    "typescript": "^5.7.3"
+  }
+}
