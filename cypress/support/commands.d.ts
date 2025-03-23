@@ -3,27 +3,38 @@
 declare namespace Cypress {
   interface Chainable<Subject = any> {
     /**
-     * Custom command to select a country.
-     * @example cy.selectCountry("Israel")
+     * Navigates to the Amazon homepage and clicks the logo if visible.
+     * @example cy.navigateToHome()
      */
-    selectCountry(country: string): Chainable<Subject>;
+    navigateToHome(): Chainable<void>;
 
     /**
-     * Custom command to select a city.
-     * @example cy.selectCity("Tel Aviv")
+     * Empties the cart by recursively deleting all items and verifies the empty message.
+     * @param emptyMessage - The expected message when the cart is empty
+     * @example cy.emptyCart("Your Amazon Cart is empty")
      */
-    selectCity(city: string): Chainable<Subject>;
+    emptyCart(emptyMessage: string): Chainable<void>;
 
     /**
-     * Custom command to click on the booking button.
-     * @example cy.clickBookingButton()
+     * Finds an item in a list by matching text or regex.
+     * @param text - The text or regex to match against the item
+     * @example cy.findItemByText(/Bostitch/)
      */
-    clickBookingButton(): Chainable<Subject>;
+    findItemByText(text: string | RegExp): Chainable<JQuery<HTMLElement>>;
 
     /**
-     * Custom command to select the number of people.
-     * @example cy.selectPeople(6)
+     * Clicks a menu item by its text content.
+     * @param menuItem - The text of the menu item to click
+     * @example cy.clickMenuItem("Customer Service")
      */
-    selectPeople(numPeople: number): Chainable<Subject>;
+    VerifyMenuItem(menuItem: string): Chainable<void>;
+
+    /**
+     * Types a search query into a specified input and submits it.
+     * @param query - The search query to type
+     * @param selector - The input selector (defaults to "#twotabsearchtextbox")
+     * @example cy.searchAndSubmit("where is my stuff", "#hubHelpSearchInput")
+     */
+    searchAndSubmit(query: string, selector?: string): Chainable<void>;
   }
 }

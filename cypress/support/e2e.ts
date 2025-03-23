@@ -19,6 +19,16 @@ import "./commands";
 // Import Testing Library support
 import "@testing-library/cypress/add-commands";
 
+// Import Cypress Image Snapshot
+import { addMatchImageSnapshotCommand } from "@simonsmith/cypress-image-snapshot/command";
+
+addMatchImageSnapshotCommand();
+
+// by all instances of `matchImageSnapshot`
+addMatchImageSnapshotCommand({
+  failureThreshold: 0.2,
+});
+
 // Ensure Cypress does not fail tests on uncaught exceptions
 Cypress.on("uncaught:exception", (err) => {
   console.error("Uncaught Exception:", err);
@@ -27,14 +37,14 @@ Cypress.on("uncaught:exception", (err) => {
 
 // Run before each test suite
 beforeEach(() => {
-  cy.clearCookies();
-  cy.clearLocalStorage();
-  cy.window().then((win) => win.sessionStorage.clear());
   cy.log("Starting a new test...");
+  cy.document().its("readyState").should("eq", "complete");
 });
 
 // Run after each test suite
 afterEach(() => {
+  cy.clearCookies();
+  cy.clearLocalStorage();
   cy.log("Test completed - Cleaning up");
 });
 

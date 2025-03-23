@@ -16,6 +16,7 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.13.12",
     "@cypress/webpack-dev-server": "^4.0.1",
+    "@simonsmith/cypress-image-snapshot": "^9.1.0",
     "@testing-library/cypress": "^10.0.3",
     "@tsconfig/node18": "^18.2.4",
     "@types/node": "^22.13.5",

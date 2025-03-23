@@ -74,21 +74,24 @@ npm run test:all
 
 ## Project Structure
 
-```
-mealticket-homework-assignment/
-│── cypress/
-│   ├── e2e/                  # Test specifications
-│   │   ├── StandardRestaurantBooking.cy.ts
-│   │   ├── SpecialOfferBookingViaHappyHour.cy.ts
-│   ├── fixtures/             # Test data
-│   │   ├── bookingData.json
-│   ├── support/              # Custom Cypress commands & configurations
+```dunAndBradstreet-homework-assignment/
+├── cypress/
+│   ├── e2e/                                  # Test specifications
+│   │   ├── amazon_customer_service_where_is_my_stuff_navigation.cy.ts
+│   │   ├── amazon_shopping_cart.spec.cy.ts
+│   ├── fixtures/                             # Test data
+│   │   ├── amazon_customer_service_where_is_my_stuff_navigation.json
+│   │   ├── simple_amazon_data.json
+│   ├── snapshots/                            # Snapshot files
+│   │   ├── amazon_customer_service_where_is_my_stuff_navigation.cy.ts/
+│   │   │   ├── wheres-my-stuff-page.snap.png
+│   ├── support/                              # Custom Cypress commands & configurations
 │   │   ├── commands.ts
 │   │   ├── e2e.ts
-│── cypress.config.ts         # Cypress configuration file
-│── package.json              # Project dependencies and scripts
-│── tsconfig.json             # TypeScript configuration
-│── README.md                 # Project documentation
+├── cypress.config.ts                         # Cypress configuration file
+├── package.json                              # Project dependencies and scripts
+├── tsconfig.json                             # TypeScript configuration
+├── README.md                                 # Project documentation
 ```
 
 ## Cypress Best Practices

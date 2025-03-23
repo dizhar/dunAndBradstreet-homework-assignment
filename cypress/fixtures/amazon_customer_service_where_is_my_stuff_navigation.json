@@ -1,0 +1,15 @@
+{
+  "main_menu": [
+    "Today's Deals",
+    "Customer Service",
+    "Registry",
+    "Gift Cards",
+    "Sell"
+  ],
+  "main_menu_option": {
+    "customer_service": "Customer Service"
+  },
+  "search_queries": {
+    "customer_service": "where is my stuff"
+  }
+}

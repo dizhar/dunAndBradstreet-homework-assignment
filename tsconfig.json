@@ -4,7 +4,11 @@
     "module": "CommonJS",
     "strict": true,
     "baseUrl": "./",
-    "types": ["cypress", "@testing-library/cypress"]
+    "types": [
+      "cypress",
+      "@testing-library/cypress",
+      "@simonsmith/cypress-image-snapshot/types"
+    ]
   },
   "include": ["cypress/**/*.ts"]
 }
